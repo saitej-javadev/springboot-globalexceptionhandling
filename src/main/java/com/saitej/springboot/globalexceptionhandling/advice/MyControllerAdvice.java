@@ -13,14 +13,14 @@ import java.util.NoSuchElementException;
 public class MyControllerAdvice  {
 
     @ExceptionHandler(InputEmptyException.class)
-    public ResponseEntity<String> handleInputReq(InputEmptyException e){
+    public ResponseEntity<String> handleInputEmptyException(InputEmptyException e){
      return  new ResponseEntity<String>("Input field is empty..Please check into it!!", HttpStatus.BAD_REQUEST);
     }
 
 
 
     @ExceptionHandler(NoSuchElementException.class)
-    public ResponseEntity<String> handleInputId(NoSuchElementException e){
+    public ResponseEntity<String> handleNoSuchElementException(NoSuchElementException e){
         return  new ResponseEntity<String>("No value present for the given id", HttpStatus.BAD_REQUEST);
     }
 
